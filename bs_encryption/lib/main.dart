@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bs_encryption/constants/color_constant.dart';
+import 'package:bs_encryption/screens/home_screen.dart';
 
 void main()=>runApp(MyApp());
 
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         backgroundColor: kBackgroundColor,
-        accentColor: kBlackColor
+        accentColor: kAccentColor
       ),
-      home: HomeScreen,
+      home: HomeScreen(),
     );
   }
 }
