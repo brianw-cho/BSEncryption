@@ -9,6 +9,7 @@ import 'package:bs_encryption/models/statement_model.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'dart:io';
+import 'package:flutter_pdf_viewer/flutter_pdf_viewer.dart';
 
 class StatementScreen extends StatefulWidget {
   @override
@@ -18,6 +19,8 @@ class StatementScreen extends StatefulWidget {
 class _StatementScreenState extends State<StatementScreen>{
   final LocalAuthentication auth = LocalAuthentication();
   final FlutterSecureStorage storage = new FlutterSecureStorage();
+  final PdfViewer viewer = PdfViewer();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -168,7 +171,7 @@ class _StatementScreenState extends State<StatementScreen>{
                                       // Get password
                                       String pass = await storage.read(key: statements[index].date);
                                       // Use password to load PDF into app
-                                      print(pass);
+                                      PdfViewer.loadAsset(statements[index].pdfpath, config: PdfViewerConfig(password: pass));
                                     }
                                   }
                                   //open pdf
