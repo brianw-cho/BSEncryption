@@ -7,6 +7,7 @@ import 'package:bs_encryption/models/card_model.dart';
 import 'package:bs_encryption/models/transaction_model.dart';
 import 'package:bs_encryption/models/statement_model.dart';
 import 'package:local_auth/local_auth.dart';
+import 'dart:io';
 
 class StatementScreen extends StatefulWidget {
   @override
@@ -119,12 +120,13 @@ class _StatementScreenState extends State<StatementScreen>{
                                 ),
                               ),
                               onPressed: () async {
+                                print("ddddd");
                                 bool biometricAvailable = await auth.canCheckBiometrics;
                                 if (biometricAvailable) {
                                   bool valid = await auth
                                       .authenticateWithBiometrics(
                                       localizedReason: 'Use Your Fingerprint to View Your Statements');
-                                  print(valid);
+                                  print("dafdfadf");
                                 }
                                 //button activation code
                               },

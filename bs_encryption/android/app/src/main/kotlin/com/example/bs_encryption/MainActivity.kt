@@ -1,6 +1,6 @@
 package com.example.bs_encryption
 
-import io.flutter.embedding.android.FlutterFragmentedActivity
+import io.flutter.embedding.android.FlutterFragmentActivity;
 
-class MainActivity: FlutterFragmentedActivity() {
+class MainActivity: FlutterFragmentActivity() {
 }
