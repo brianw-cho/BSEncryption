@@ -13,5 +13,5 @@ for i in range(0, len(passwords)):
         starter_pdf = PdfFileReader(file)
         encrypted_pdf.appendPagesFromReader(starter_pdf)
         encrypted_pdf.encrypt(passwords[i])
-        with open("statement " + str(i) + ".pdf", "wb") as output:
+        with open("encrypted_statements\\statement " + str(i) + ".pdf", "wb") as output:
             encrypted_pdf.write(output)
