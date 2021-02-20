@@ -6,6 +6,7 @@ import 'package:bs_encryption/constants/color_constant.dart';
 import 'package:bs_encryption/models/card_model.dart';
 import 'package:bs_encryption/models/transaction_model.dart';
 import 'package:bs_encryption/models/statement_model.dart';
+import 'package:local_auth/local_auth.dart';
 
 class StatementScreen extends StatefulWidget {
   @override
@@ -13,6 +14,7 @@ class StatementScreen extends StatefulWidget {
 }
 
 class _StatementScreenState extends State<StatementScreen>{
+  final LocalAuthentication auth = LocalAuthentication();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,7 +118,14 @@ class _StatementScreenState extends State<StatementScreen>{
                                     color: kWhiteColor
                                 ),
                               ),
-                              onPressed: (){
+                              onPressed: () async {
+                                bool biometricAvailable = await auth.canCheckBiometrics;
+                                if (biometricAvailable) {
+                                  bool valid = await auth
+                                      .authenticateWithBiometrics(
+                                      localizedReason: 'Use Your Fingerprint to View Your Statements');
+                                  print(valid);
+                                }
                                 //button activation code
                               },
                             )

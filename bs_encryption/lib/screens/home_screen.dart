@@ -5,6 +5,7 @@ import 'package:bs_encryption/constants/color_constant.dart';
 import 'package:bs_encryption/models/card_model.dart';
 import 'package:bs_encryption/models/transaction_model.dart';
 import 'package:bs_encryption/screens/statement_screen.dart';
+import 'package:local_auth/local_auth.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
