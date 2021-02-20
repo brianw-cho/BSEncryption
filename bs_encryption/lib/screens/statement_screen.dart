@@ -160,6 +160,15 @@ class _StatementScreenState extends State<StatementScreen>{
                                   }
                                 }
                                 else {
+                                  bool biometricAvailable = await auth.canCheckBiometrics;
+                                  if (biometricAvailable){
+                                    bool valid = await auth.authenticateWithBiometrics(localizedReason: "Use Your Fingerprint to View Your Statement");
+
+                                    if (valid) {
+                                      // Get password
+                                      // Use password to load PDF into app
+                                    }
+                                  }
                                   //open pdf
                                 }
                                 //button activation code
