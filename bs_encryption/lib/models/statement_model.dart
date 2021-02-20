@@ -3,7 +3,7 @@ import 'package:bs_encryption/constants/color_constant.dart';
 
 class StatementModel {
   String date;
-  bool downloaded;
+  String downloaded;
 
   StatementModel(this.date, this.downloaded);
 }
@@ -16,84 +16,84 @@ List<StatementModel> statements = statementData
 
 var statementData = [
   {
-    "date": "20 Feb 2020",
-    "downloaded": false
+    "date": "20 Feb 2021",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "19 Feb 2020",
-    "downloaded": true
+    "date": "20 Jan 2021",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
 
   {
-    "date": "18 Feb 2020",
-    "downloaded": false
+    "date": "20 Dec 2020",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "17 Feb 2020",
-    "downloaded": false
+    "date": "20 Nov 2020",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "16 Feb 2020",
-    "downloaded": true
+    "date": "20 Oct 2020",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
   {
-    "date": "15 Feb 2020",
-    "downloaded": false
+    "date": "20 Sep 2020",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "14 Feb 2020",
-    "downloaded": false
+    "date": "20 Aug 2020",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "13 Feb 2020",
-    "downloaded": false
+    "date": "20 Jul 2020",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "12 Feb 2020",
-    "downloaded": true
+    "date": "20 Jun 2020",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
   {
-    "date": "11 Feb 2020",
-    "downloaded": true
+    "date": "20 May 2020",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
   {
-    "date": "10 Feb 2020",
-    "downloaded": true
+    "date": "20 Apr 2020",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
   {
-    "date": "9 Feb 2020",
-    "downloaded": false
+    "date": "20 Mar 2020",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "8 Feb 2020",
-    "downloaded": true
+    "date": "20 Feb 2020",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
   {
-    "date": "7 Feb 2020",
-    "downloaded": false
+    "date": "20 Jan 2020",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "6 Feb 2020",
-    "downloaded": true
+    "date": "20 Dec 2019",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
   {
-    "date": "5 Feb 2020",
-    "downloaded": false
+    "date": "20 Nov 2019",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "4 Feb 2020",
-    "downloaded": true
+    "date": "20 Oct 2019",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
   {
-    "date": "3 Feb 2020",
-    "downloaded": true
+    "date": "20 Sep 2019",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
   {
-    "date": "2 Feb 2020",
-    "downloaded": false
+    "date": "20 Aug 2019",
+    "downloaded": 'assets/icons/undownloaded-icon.png'
   },
   {
-    "date": "1 Feb 2020",
-    "downloaded": true
+    "date": "20 Jul 2020",
+    "downloaded": 'assets/icons/downloaded-logo.png'
   },
 ];

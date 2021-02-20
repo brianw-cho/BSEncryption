@@ -179,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen>{
                     ),
                   ),
                   Text(
-                    'See all transaction',
+                    'See all transactions',
                     style: GoogleFonts.nunito(
                         fontSize: 12,
                         fontWeight: FontWeight.w700,

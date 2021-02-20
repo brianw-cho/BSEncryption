@@ -52,7 +52,7 @@ class _StatementScreenState extends State<StatementScreen>{
         physics: ClampingScrollPhysics(),
         children: <Widget>[
           Container(
-            height: 800,
+            height: 610,
             child: ListView.builder(
                 padding: EdgeInsets.only(left:16, right: 16, top: 10),
                 itemCount: statements.length,
@@ -97,6 +97,15 @@ class _StatementScreenState extends State<StatementScreen>{
                               color: kWhiteColor
                             ),
                           ),
+                        ),
+                        Positioned(
+                          top:10,
+                            right:100,
+                          child: Image.asset(
+                              statements[index].downloaded,
+                              height: 50,
+                              width: 50,
+                          )
                         ),
                         Positioned(
                             top: 10,
