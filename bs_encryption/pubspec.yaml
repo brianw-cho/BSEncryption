@@ -21,6 +21,10 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  syncfusion_flutter_pdf: ^18.4.33-beta
+  advance_pdf_viewer: ^1.2.2
+  open_file: ^3.0.1   #Open source library to launch the PDF file in mobile devices
+  path_provider: ^1.6.5
   flutter:
     sdk: flutter
   google_fonts: ^1.1.0
@@ -46,6 +50,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/svg/
+    - assets/sample.pdf
 
   fonts:
     - family: nav_drawer

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -5,7 +7,10 @@ import 'package:bs_encryption/constants/color_constant.dart';
 import 'package:bs_encryption/models/card_model.dart';
 import 'package:bs_encryption/models/transaction_model.dart';
 import 'package:bs_encryption/screens/statement_screen.dart';
+import 'package:bs_encryption/screens/pdfHandler.dart';
 import 'package:local_auth/local_auth.dart';
+import 'package:open_file/open_file.dart';
+import 'package:path_provider/path_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,6 +18,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen>{
+  List<int> get bytes => null;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -293,6 +301,34 @@ class _HomeScreenState extends State<HomeScreen>{
                         ),
                       ]
                     )
+                  );
+                },
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 24, top: 32, bottom: 16, right: 24),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                            (Set<MaterialState> states){
+                          if (states.contains(MaterialState.pressed))
+                            return kButtonPressedColor;
+                          return kAccentColor;
+                        }
+                    )
+                ),
+                child: Text(
+                  'View Statements',
+                  style: GoogleFonts.nunito(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      color: kWhiteColor
+                  ),
+                ),
+                onPressed: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => pdfHandler())
                   );
                 },
               ),
