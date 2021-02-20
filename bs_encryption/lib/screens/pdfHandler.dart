@@ -8,7 +8,7 @@ class pdfHandler extends StatefulWidget {
 
 class pdfShower extends State<pdfHandler> {
   PDFDocument document;
-  bool _isLoading;
+  bool _isLoading = true;
   @override
   void initState(){
     super.initState();
@@ -27,7 +27,7 @@ class pdfShower extends State<pdfHandler> {
         body: Center(
           child: _isLoading
               ? Center(child: CircularProgressIndicator())
-              : PDFViewer(document: document, zoomSteps: 1),
+              : PDFViewer(document: document, zoomSteps: 5,),
         ),
       ),
     );
