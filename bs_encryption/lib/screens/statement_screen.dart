@@ -155,8 +155,6 @@ class _StatementScreenState extends State<StatementScreen>{
                                     if (valid) {
                                       await storage.write(key: statements[index].date,
                                           value: statements[index].password);
-                                      print(await storage.read(
-                                          key: 'PDF password'));
                                       setState(() => statements[index].isDownloaded = true);
                                       setState(() => statements[index].downloaded = 'assets/icons/downloaded-logo.png');
                                     }
