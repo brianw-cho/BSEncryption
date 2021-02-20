@@ -110,9 +110,12 @@ class _StatementScreenState extends State<StatementScreen>{
                           )
                         ),
                         Positioned(
-                            top: 10,
+                            top: 19,
                             right: 10,
-                            child: ElevatedButton(
+                            child: SizedBox(
+                              width: 90,
+                                height: 30,
+                                child: ElevatedButton(
                               style: ButtonStyle(
                                   backgroundColor: MaterialStateProperty.resolveWith<Color>(
                                           (Set<MaterialState> states){
@@ -120,30 +123,48 @@ class _StatementScreenState extends State<StatementScreen>{
                                           return kButtonPressedColor;
                                         return kAccentColor;
                                       }
-                                  )
+                                  ),
                               ),
-                              child: Text(
+                              child: !statements[index].isDownloaded ? Text(
                                 'Download',
                                 style: GoogleFonts.nunito(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w400,
                                     color: kWhiteColor
-                                ),
+                                )
+                              ) : Text(
+                                  'View',
+                                  style: GoogleFonts.nunito(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                      color: kWhiteColor
+                                  )
                               ),
                               onPressed: () async {
-                                bool biometricAvailable = await auth.canCheckBiometrics;
-                                if (biometricAvailable) {
-                                  bool valid = await auth
-                                      .authenticateWithBiometrics(
-                                      localizedReason: 'Use Your Fingerprint to View Your Statement');
+                                if (!statements[index].isDownloaded) {
+                                  bool biometricAvailable = await auth
+                                      .canCheckBiometrics;
+                                  if (biometricAvailable) {
+                                    bool valid = await auth
+                                        .authenticateWithBiometrics(
+                                        localizedReason: 'Use Your Fingerprint to View Your Statement');
 
-                                  if (valid){
-                                    await storage.write(key: 'PDF password', value: 'password123');
-                                    print(await storage.read(key: 'PDF password'));
+                                    if (valid) {
+                                      await storage.write(key: 'PDF password',
+                                          value: 'password123');
+                                      print(await storage.read(
+                                          key: 'PDF password'));
+                                      setState(() => statements[index].isDownloaded = true);
+                                      setState(() => statements[index].downloaded = 'assets/icons/downloaded-logo.png');
+                                    }
                                   }
+                                }
+                                else {
+                                  //open pdf
                                 }
                                 //button activation code
                               },
+                            )
                             )
                         )
                       ],
