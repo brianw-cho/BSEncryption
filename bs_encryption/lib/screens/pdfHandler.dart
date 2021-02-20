@@ -9,23 +9,27 @@ class pdfHandler extends StatefulWidget {
 class pdfShower extends State<pdfHandler> {
   PDFDocument document;
   bool _isLoading;
+  @override
+  void initState(){
+    super.initState();
+    docSelect();
+  }
   Future<void> docSelect() async {
     document = await PDFDocument.fromAsset('assets/sample.pdf');
     setState(() => _isLoading = false);
   }
 
-
   @override
   Widget build(BuildContext context) {
-    docSelect();
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Example'),
-      ),
-      body: Center(
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text("Estatemenet")),
+        body: Center(
           child: _isLoading
               ? Center(child: CircularProgressIndicator())
-              : PDFViewer(document: document)),
+              : PDFViewer(document: document, zoomSteps: 1),
+        ),
+      ),
     );
   }
 }
