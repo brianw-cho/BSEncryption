@@ -116,7 +116,7 @@ class _StatementScreenState extends State<StatementScreen>{
                             top: 19,
                             right: 10,
                             child: SizedBox(
-                              width: 90,
+                              width: 95,
                                 height: 30,
                                 child: ElevatedButton(
                               style: ButtonStyle(
