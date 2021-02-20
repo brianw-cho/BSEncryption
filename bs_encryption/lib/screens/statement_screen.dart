@@ -147,7 +147,7 @@ class _StatementScreenState extends State<StatementScreen>{
                                   if (biometricAvailable) {
                                     bool valid = await auth
                                         .authenticateWithBiometrics(
-                                        localizedReason: 'Use Your Fingerprint to View Your Statement');
+                                        localizedReason: 'Use Your Fingerprint to Download Your Statement');
 
                                     if (valid) {
                                       await storage.write(key: 'PDF password',
