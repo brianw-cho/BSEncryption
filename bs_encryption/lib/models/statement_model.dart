@@ -30,8 +30,8 @@ var statementData = [
   },
   {
     "date": "20 Jan 2021",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement1.pdf",
     "password": "vzVSKNx2mHJuWb9P"
   },
@@ -52,8 +52,8 @@ var statementData = [
   },
   {
     "date": "20 Oct 2020",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement4.pdf",
     "password": "uCqyWdQYjtp8V2Pe"
   },
@@ -80,22 +80,22 @@ var statementData = [
   },
   {
     "date": "20 Jun 2020",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement8.pdf",
     "password": "dLkbMPtS32aGycJg"
   },
   {
     "date": "20 May 2020",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement9.pdf",
     "password": "UGwtKNxnRpg59L24"
   },
   {
     "date": "20 Apr 2020",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement10.pdf",
     "password": "HadsL54EUJYv9Zrj"
   },
@@ -108,8 +108,8 @@ var statementData = [
   },
   {
     "date": "20 Feb 2020",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement12.pdf",
     "password": "eJyrFzNMhEg2G4qD"
   },
@@ -122,8 +122,8 @@ var statementData = [
   },
   {
     "date": "20 Dec 2019",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement14.pdf",
     "password": "gfM3H8GP29BTFrJA"
   },
@@ -136,15 +136,15 @@ var statementData = [
   },
   {
     "date": "20 Oct 2019",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement16.pdf",
     "password": "RcjFgC5Q2PUbnz3M"
   },
   {
     "date": "20 Sep 2019",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement17.pdf",
     "password": "ba3Mvr9VzE4XWCSU"
   },
@@ -157,8 +157,8 @@ var statementData = [
   },
   {
     "date": "20 Jul 2020",
-    "downloaded": 'assets/icons/downloaded-logo.png',
-    "isDownloaded": true,
+    "downloaded": 'assets/icons/undownloaded-icon.png',
+    "isDownloaded": false,
     "pdfpath": "assets/encrypted_statements/statement19.pdf",
     "password": "xDACb5zSm2KMndXH"
   },
