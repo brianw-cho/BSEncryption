@@ -150,8 +150,8 @@ class _StatementScreenState extends State<StatementScreen>{
                                         localizedReason: 'Use Your Fingerprint to Download Your Statement');
 
                                     if (valid) {
-                                      await storage.write(key: 'PDF password',
-                                          value: 'password123');
+                                      await storage.write(key: statements[index].date,
+                                          value: statements[index].password);
                                       print(await storage.read(
                                           key: 'PDF password'));
                                       setState(() => statements[index].isDownloaded = true);
@@ -166,7 +166,9 @@ class _StatementScreenState extends State<StatementScreen>{
 
                                     if (valid) {
                                       // Get password
+                                      String pass = await storage.read(key: statements[index].date);
                                       // Use password to load PDF into app
+                                      print(pass);
                                     }
                                   }
                                   //open pdf
