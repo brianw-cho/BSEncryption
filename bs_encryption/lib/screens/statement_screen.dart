@@ -7,6 +7,7 @@ import 'package:bs_encryption/models/card_model.dart';
 import 'package:bs_encryption/models/transaction_model.dart';
 import 'package:bs_encryption/models/statement_model.dart';
 import 'package:local_auth/local_auth.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'dart:io';
 
 class StatementScreen extends StatefulWidget {
@@ -130,7 +131,6 @@ class _StatementScreenState extends State<StatementScreen>{
                                 ),
                               ),
                               onPressed: () async {
-                                print("ddddd");
                                 bool biometricAvailable = await auth.canCheckBiometrics;
                                 if (biometricAvailable) {
                                   bool valid = await auth
