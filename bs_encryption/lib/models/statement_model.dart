@@ -3,7 +3,7 @@ import 'package:bs_encryption/constants/color_constant.dart';
 
 class StatementModel {
   String date;
-  String downloaded;
+  bool downloaded;
 
   StatementModel(this.date, this.downloaded);
 }
