@@ -1,6 +1,6 @@
-# bank_statement_encryption
+# bs_encryption
 
-A proof of concept android application that encrypts pdfs printed from banking applications
+A new Flutter application.
 
 ## Getting Started
 

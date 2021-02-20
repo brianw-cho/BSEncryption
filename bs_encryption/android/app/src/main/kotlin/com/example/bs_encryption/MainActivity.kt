@@ -1,4 +1,4 @@
-package com.example.bank_statement_encryption
+package com.example.bs_encryption
 
 import io.flutter.embedding.android.FlutterActivity
 

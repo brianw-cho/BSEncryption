@@ -1,5 +1,5 @@
-name: bank_statement_encryption
-description: A proof of concept android application that encrypts pdfs printed from banking applications
+name: bs_encryption
+description: A new Flutter application.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
