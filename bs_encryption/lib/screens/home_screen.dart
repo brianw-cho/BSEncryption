@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:bs_encryption/constants/color_constant.dart';
 import 'package:bs_encryption/models/card_model.dart';
 import 'package:bs_encryption/models/transaction_model.dart';
+import 'package:bs_encryption/screens/statement_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -293,6 +294,35 @@ class _HomeScreenState extends State<HomeScreen>{
                     )
                   );
                 },
+              ),
+            ),
+
+            Padding(
+              padding: EdgeInsets.only(left: 24, top: 32, bottom: 16, right: 24),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                      (Set<MaterialState> states){
+                        if (states.contains(MaterialState.pressed))
+                          return kButtonPressedColor;
+                        return kAccentColor;
+                      }
+                  )
+                ),
+                child: Text(
+                  'View Statements',
+                  style: GoogleFonts.nunito(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: kWhiteColor
+                  ),
+                ),
+                  onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => StatementScreen())
+                  );
+                  },
               ),
             )
           ]

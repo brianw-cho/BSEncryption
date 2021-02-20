@@ -13,3 +13,4 @@ const kJeniusCardColor = Color(0xFF03A5e1);
 const kMasterCardColor = Color(0xFFF5F5F5);
 const kGradientSlideButton = [const Color(0xFF3B64F4), const Color(0xFF6822FD)];
 const kPurpleColor = Color(0xFFd442f5);
+const kButtonPressedColor = Color(0xFFbf2e26);
