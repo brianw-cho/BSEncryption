@@ -7,11 +7,7 @@ import 'package:bs_encryption/models/card_model.dart';
 import 'package:bs_encryption/models/transaction_model.dart';
 import 'package:bs_encryption/models/statement_model.dart';
 import 'package:local_auth/local_auth.dart';
-<<<<<<< Updated upstream
-=======
 import 'dart:io';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
->>>>>>> Stashed changes
 
 class StatementScreen extends StatefulWidget {
   @override
@@ -57,7 +53,7 @@ class _StatementScreenState extends State<StatementScreen>{
         physics: ClampingScrollPhysics(),
         children: <Widget>[
           Container(
-            height: 800,
+            height: 610,
             child: ListView.builder(
                 padding: EdgeInsets.only(left:16, right: 16, top: 10),
                 itemCount: statements.length,
@@ -104,6 +100,15 @@ class _StatementScreenState extends State<StatementScreen>{
                           ),
                         ),
                         Positioned(
+                          top:10,
+                            right:100,
+                          child: Image.asset(
+                              statements[index].downloaded,
+                              height: 50,
+                              width: 50,
+                          )
+                        ),
+                        Positioned(
                             top: 10,
                             right: 10,
                             child: ElevatedButton(
@@ -125,21 +130,17 @@ class _StatementScreenState extends State<StatementScreen>{
                                 ),
                               ),
                               onPressed: () async {
+                                print("ddddd");
                                 bool biometricAvailable = await auth.canCheckBiometrics;
                                 if (biometricAvailable) {
                                   bool valid = await auth
                                       .authenticateWithBiometrics(
-<<<<<<< Updated upstream
-                                      localizedReason: 'Use Your Fingerprint to View Your Statements');
-                                  print(valid);
-=======
                                       localizedReason: 'Use Your Fingerprint to View Your Statement');
 
                                   if (valid){
                                     await storage.write(key: 'PDF password', value: 'password123');
                                     print(await storage.read(key: 'PDF password'));
                                   }
->>>>>>> Stashed changes
                                 }
                                 //button activation code
                               },

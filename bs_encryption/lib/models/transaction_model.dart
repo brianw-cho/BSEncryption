@@ -38,7 +38,7 @@ var transactionData = [
     "amount": "200.000",
     "information": "Transfer to",
     "recipient": "Michael Ballack",
-    "date": "12 Feb 2020",
+    "date": "12 Feb 2021",
     "card": "assets/images/mastercard_logo.png"
   },
   {
@@ -48,19 +48,19 @@ var transactionData = [
     "signType": "+",
     "amount": "352.000",
     "information": "Received from",
-    "recipient": "Patrick Star",
-    "date": "10 Feb 2020",
+    "recipient": "Dylan Chang",
+    "date": "10 Feb 2021",
     "card": "assets/images/jenius_logo_blue.png"
   },
   {
-    "name": "Outcome",
-    "type": 'assets/icons/outcome_icon.svg',
-    "colorType": kOrangeColor,
-    "signType": "-",
-    "amount": "53.265",
-    "information": "Monthly Payment",
-    "recipient": "Spotify",
-    "date": "09 Feb 2020",
+    "name": "Income",
+    "type": 'assets/icons/income_icon.svg',
+    "colorType": kGreenColor,
+    "signType": "+",
+    "amount": "200.000",
+    "information": "Received from",
+    "recipient": "UofT Hacks",
+    "date": "09 Feb 2021",
     "card": "assets/images/mastercard_logo.png"
   }
 ];
