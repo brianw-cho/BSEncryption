@@ -328,7 +328,7 @@ class _HomeScreenState extends State<HomeScreen>{
                 onPressed: (){
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => pdfHandler())
+                      MaterialPageRoute(builder: (context) => pdfHandler("assets/sample.pdf"))
                   );
                 },
               ),

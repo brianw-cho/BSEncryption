@@ -3,19 +3,27 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class pdfHandler extends StatefulWidget {
-  pdfShower createState() => pdfShower();
+  String path = 'assets/sample.pdf';
+  pdfHandler(String path){
+    this.path = path;
+  }
+  pdfShower createState() => pdfShower(path);
 }
 
 class pdfShower extends State<pdfHandler> {
+  pdfShower(String path){
+    this.path = path;
+  }
   PDFDocument document;
   bool _isLoading = true;
+  String path;
   @override
   void initState(){
     super.initState();
     docSelect();
   }
   Future<void> docSelect() async {
-    document = await PDFDocument.fromAsset('assets/sample.pdf');
+    document = await PDFDocument.fromAsset(path);
     setState(() => _isLoading = false);
   }
 
