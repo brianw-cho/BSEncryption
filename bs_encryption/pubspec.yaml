@@ -51,6 +51,7 @@ flutter:
     - assets/icons/
     - assets/svg/
     - assets/sample.pdf
+    - assets/encrypted_statements/
 
   fonts:
     - family: nav_drawer
