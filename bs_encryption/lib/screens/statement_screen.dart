@@ -7,6 +7,11 @@ import 'package:bs_encryption/models/card_model.dart';
 import 'package:bs_encryption/models/transaction_model.dart';
 import 'package:bs_encryption/models/statement_model.dart';
 import 'package:local_auth/local_auth.dart';
+<<<<<<< Updated upstream
+=======
+import 'dart:io';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+>>>>>>> Stashed changes
 
 class StatementScreen extends StatefulWidget {
   @override
@@ -15,6 +20,7 @@ class StatementScreen extends StatefulWidget {
 
 class _StatementScreenState extends State<StatementScreen>{
   final LocalAuthentication auth = LocalAuthentication();
+  final FlutterSecureStorage storage = new FlutterSecureStorage();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,8 +129,17 @@ class _StatementScreenState extends State<StatementScreen>{
                                 if (biometricAvailable) {
                                   bool valid = await auth
                                       .authenticateWithBiometrics(
+<<<<<<< Updated upstream
                                       localizedReason: 'Use Your Fingerprint to View Your Statements');
                                   print(valid);
+=======
+                                      localizedReason: 'Use Your Fingerprint to View Your Statement');
+
+                                  if (valid){
+                                    await storage.write(key: 'PDF password', value: 'password123');
+                                    print(await storage.read(key: 'PDF password'));
+                                  }
+>>>>>>> Stashed changes
                                 }
                                 //button activation code
                               },
