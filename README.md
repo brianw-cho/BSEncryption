@@ -9,3 +9,5 @@ Bank Statement Encryption (BSE) is a method of securing a user's bank statements
 * 1517 Grant for Most Unique Hack
 * Scotiabank - Best Implementation of Cybersecurity in Banking
 
+For more details about this project, visit the devpost submission page [here](https://devpost.com/software/bank-statement-encryption-bse-protocol).
+
